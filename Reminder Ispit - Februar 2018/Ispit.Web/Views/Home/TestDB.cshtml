@@ -1,0 +1,32 @@
+﻿@model Ispit.Data.MyContext
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="title">Broj zapisa po tabelama</h2>
+
+<table class="table--db table-bordered table-striped table-hover">
+    <tr>
+        <td>Događaji</td>
+        <td>@Model.Dogadjaj.Count()</td>
+    </tr>
+
+    <tr>
+        <td>Nastavnici</td>
+        <td>@Model.Nastavnik.Count()</td>
+    </tr>
+
+    <tr>
+        <td>Obaveza</td>
+        <td>@Model.Obaveza.Count()</td>
+    </tr>
+    <tr>
+        <td>Student</td>
+        <td> @Model.Student.Count()</td>
+    </tr>
+    <tr>
+</table>
+
+<a asp-controller="Home" asp-action="Index" class="mtd-1 btn btn-primary"><i class="pr-1 fas fa-angle-left"></i>Nazad</a>

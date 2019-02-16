@@ -1,0 +1,28 @@
+﻿@model Ispit.Data.EntityModels.OznacenDogadjaj
+@{
+    ViewData["Title"] = "Detalji";
+}
+<nav class="mtd-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Početna</a></li>
+        <li class="breadcrumb-item"><a asp-controller="OznaceniDogadaji" asp-action="Index">Događaji</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Događaj @Model.Dogadjaj.Opis</li>
+    </ol>
+</nav>
+<h2 class="title" ajaxOnLoad="da" ajaxRezultat="ajaxDiv" ajaxUrl="/DetaljiAjax/Index/@Model.Dogadjaj.ID">Podaci o događaju</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <h4><b>Datum događaja</b> @Model.Dogadjaj.DatumOdrzavanja.ToShortDateString()</h4>
+        <h4><b>Datum dodavanja</b> @Model.DatumDodavanja.ToShortDateString()</h4>
+    </div>
+    <div class="col-md-6">
+        <h4><b>Opis događaja</b> @Model.Dogadjaj.Opis</h4>
+        <h4><b>Nastavnik</b> @Model.Dogadjaj.Nastavnik.ImePrezime</h4>
+    </div>
+
+</div>
+
+<div id="ajaxDiv"></div>
+

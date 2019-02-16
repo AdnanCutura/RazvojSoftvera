@@ -1,0 +1,148 @@
+﻿@using eUniverzitet.Web.Helper
+@using Ispit.Data.EntityModels
+@model Ispit.Web.ViewModels.DogadjajiVm
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    KorisnickiNalog username = Context.GetLogiraniKorisnik();
+}
+<nav class="mtd-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Početna</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Događaji</li>
+    </ol>
+</nav>
+
+<h2 class="title">Događaji za @username.KorisnickoIme</h2>
+
+@{
+    if (Model.NastavnikDogadjaji != null)
+    {
+        <h4>Prikaz aktuelnih događaja</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Datum održavanja</th>
+                    <th>Opis</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var d in Model.NastavnikDogadjaji)
+                {
+                    <tr>
+                        <td>@d.DatumOdrzavanja.ToString("dd.MM.yyyy")</td>
+                        <td>@d.Opis</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    }
+    else
+    {
+        <h4>Nofitikacije</h4>
+        <div class="notifOut">
+            @{
+
+                foreach (var dogadjaj in Model.OznaceniDogadjaji)
+                {
+                    var datumDogadjaja = dogadjaj.DatumOdrzavanja;
+                    var preostaliDani = (int)datumDogadjaja.Subtract(DateTime.Now).TotalDays;
+
+                    foreach (var stanje in Model.StanjaObaveza)
+                    {
+                        if (stanje.OznacenDogadjajID == dogadjaj.ID &&
+                            !Model.Notifikacije.Any(n => n.StanjeObavezeID == stanje.Id) &&
+                            (
+                                (stanje.NotifikacijeRekurizivno && stanje.NotifikacijaDanaPrije >= preostaliDani) ||
+                                (!stanje.NotifikacijeRekurizivno && stanje.NotifikacijaDanaPrije == preostaliDani)
+                            )
+                        )
+                        {
+                            <div class="alert alert-warning" role="alert">
+                                <strong>Događaj "@dogadjaj.Opis" - @dogadjaj.DatumOdrzavanja.ToShortDateString().</strong> Ovo je podsjetnik za obavezu "@stanje.Obaveza.Naziv". Označi kao <a asp-controller="OznaceniDogadaji" asp-route-id="@stanje.Id" class="btn btn-success btn-xs" asp-action="ProcitanaNotifikacija">pročitanu</a>
+                            </div>
+                        }
+
+                    }
+                }
+            }
+        </div>
+
+
+        <h3>Neoznačeni događaji</h3>
+
+        <div class="tableout">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Nastavnik</th>
+                        <th>Opis</th>
+                        <th>Broj obaveza</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var dogadjaj in Model.NeoznaceniDogadjaji)
+                        {
+                            <tr>
+                                <td>@dogadjaj.DatumOdrzavanja</td>
+                                <td>@dogadjaj.Nastavnik</td>
+                                <td>@dogadjaj.Opis</td>
+                                <td>@dogadjaj.BrojObaveza</td>
+                                <td>
+                                    @{
+                                        if (dogadjaj.DatumOdrzavanja <= DateTime.Now)
+                                        {
+                                            <p>Događaj je prošao</p>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="OznaceniDogadaji" asp-action="Dodaj" asp-route-id="@dogadjaj.ID" class="btn btn-success">Dodaj</a>
+                                        }
+                                    }
+
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <hr class="mtd-1" />
+
+        <h3>Označeni događaji</h3>
+        <div class="tableout">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Nastavnik</th>
+                        <th>Opis</th>
+                        <th>Relizovano obaveza RO</th>
+                        <th>Akcija</th>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var dogadjaj in Model.OznaceniDogadjaji)
+                        {
+                            <tr>
+                                <td>@dogadjaj.DatumOdrzavanja</td>
+                                <td>@dogadjaj.Nastavnik</td>
+                                <td>@dogadjaj.Opis</td>
+                                <td>@dogadjaj.RealizovanoObaveza%</td>
+                                <td><a asp-controller="OznaceniDogadaji" asp-action="Detalji" asp-route-id="@dogadjaj.ID" class="btn btn-info">Detalji</a></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}

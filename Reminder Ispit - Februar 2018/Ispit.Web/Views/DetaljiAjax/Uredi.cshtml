@@ -1,0 +1,27 @@
+﻿@model Ispit.Data.EntityModels.StanjeObaveze
+@{
+    ViewData["Title"] = "Uredi";
+}
+<hr>
+<h4>Evidentiranje stanja obaveze  <b>@Model.Obaveza.Naziv</b></h4>
+<form ajaxPoziv="da" ajaxRezultat="ajaxDiv" ajaxUrl="/DetaljiAjax/Snimi">
+    <div class="row">
+        <div class="col-md-2">
+            <h5>Završeno procentualno: </h5>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input class="form-control" asp-for="IzvrsenoProcentualno" placeholder="Procenat">
+                <span class="input-group-addon">%</span>
+            </div>
+            <span asp-validation-for="IzvrsenoProcentualno" class="text-danger">Opseg mora biti između 0 i 100.</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success btn-block mtd-1">Snimi</button>
+        </div>
+    </div>
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="OznacenDogadjajID" />
+</form>

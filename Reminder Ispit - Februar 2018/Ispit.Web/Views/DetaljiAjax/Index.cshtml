@@ -1,0 +1,33 @@
+﻿@model Ispit.Web.ViewModels.DetaljiAjaxVm
+@{
+    ViewData["Title"] = "Index";
+}
+<hr/>
+<h4>Obaveze za događaj</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Procenat realizacije obaveze</th>
+            <th>Šalji notifikaciju<br> x dana
+                unaprijed</th>
+            <th>Ponavljaj notifikaciju <br>svaki dan do
+                početka događaja</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var stanje in @Model.StanjeObaveze)
+            {
+                <tr>
+                    <td>@stanje.Obaveza.Naziv</td>
+                    <td>@stanje.IzvrsenoProcentualno %</td>
+                    <td>@stanje.NotifikacijaDanaPrije</td>
+                    <td>@(stanje.NotifikacijeRekurizivno ? "DA" : "NE")</td>
+                    <td><a ajaxpoziv="da" ajaxrezultat="ajaxDiv" ajaxurl="/DetaljiAjax/Uredi/@stanje.Id" class="btn btn-primary">Uredi</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
