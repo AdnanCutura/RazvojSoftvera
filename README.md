@@ -1,2 +1,4 @@
 # RazvojSoftvera
-Razvoj softvera I - RS1 - ASP.NET Core
+
+Ispitni zadaci iz predmeta Razvoj softvera I - RS1 
+ASP.NET Core
