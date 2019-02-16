@@ -1,0 +1,98 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModel.MaturskiIspitiVm
+@{
+    ViewData["Title"] = "Odaberi";
+    var message = (string)TempData["message-key"];
+}
+@if (message != null)
+{
+    <div class="mtd-1 alert alert-success" role="alert" id="messageBox">
+        <i class="fas fa-info-circle pr-1"></i> <span>@message</span>
+    </div>
+}
+
+<nav class="mtd-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Početna</a></li>
+        <li class="breadcrumb-item"><a asp-controller="OdrzanaNastava" asp-action="Index">Nastavnici</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Maturski ispiti</li>
+    </ol>
+</nav>
+
+<h2 class="title">Maturski ispiti</h2>
+@{
+    if (!Model.MaturskiIspiti.Any())
+    {
+        <div class="alert alert-info">
+            <i class="fas fa-bell pr-1"></i>Trenutno nema ni jedan maturski ispit
+        </div>
+    }
+    else
+    {
+        <h4>Prikaz maturskih ispita</h4>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Škola</th>
+                    <th>Predmet</th>
+                    <th>Nisu pristupili</th>
+                    <th>Akcija</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var maturski in Model.MaturskiIspiti)
+                    {
+                        <tr>
+                            <td>@maturski.DatumIspita</td>
+                            <td>@maturski.Skola</td>
+                            <td>@maturski.Predmet</td>
+                            <td>
+                                @{
+                                    foreach (var odsutan in maturski.Odsutni)
+                                    {
+                                        <span>@odsutan / </span>
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @* data-toggle="modal" data-target="#dltModal" *@
+                                <a asp-action="Uredi" asp-route-id="@maturski.Id" class="btn btn-primary"><i class="fas fa-pencil-alt pr-1"></i>Uredi</a>
+                                <a data-toggle="modal" data-target="#dltModal-@maturski.Id" class="btn btn-danger"><i class="fas fa-trash-alt pr-1"></i>Obriši</a>
+                                <!--Modal za potvrdu brisanja-->
+                                <div id="dltModal-@maturski.Id" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="mtd-1 modal-title">Da li ste sigurni da želite obrisati maturski ispit iz predmeta @maturski.Predmet?</h4>
+                                                <div class="alert alert-warning">
+                                                    <i class="fas fa-exclamation-triangle pr-1"></i>Ako izbrišete maturski ispit izbrisat ćete i sve podatke o učenicima vezane za maturski ispit
+                                                </div>
+                                            </div>
+                                            <div class="modal-body modal--buttons">
+                                                <a asp-route-id="@maturski.Id" asp-action="ObrisiMaturski" class="btn btn-danger btn-md button__wide ">DA</a>
+                                                <a data-dismiss="modal" class="btn btn-primary btn-md button__wide ">NE</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+        </table>
+
+    }
+
+}
+
+<a asp-action="Dodaj" asp-route-id="@Model.NastavnikId" class="btn btn-success btn-block">Dodaj maturski ispit</a>
+

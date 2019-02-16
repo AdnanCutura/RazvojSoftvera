@@ -1,0 +1,27 @@
+﻿@model RS1_Ispit_asp.net_core.EntityModels.MaturskiIspitStavke
+
+<form ajax-url="/Ajax/Snimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" method="post" clas="form-control">
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <h4>Ime i prezime učenika</h4>
+                <p>@Model.OdjeljenjeStavka.Ucenik.ImePrezime</p>
+                <input asp-for="OdjeljenjeStavka.Ucenik.ImePrezime" type="hidden" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <h4>Broj ostvarenih bodova</h4>
+                <input asp-for="RezultatMaturskog" class="form-control" type="text" />
+                <span asp-validation-for="RezultatMaturskog" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <input asp-for="Id" type="hidden" readonly />
+    <input asp-for="MaturskiIspitId" type="hidden" readonly />
+    <button type="submit" class="btn btn-success button__wide">Sačuvaj</button>
+
+</form>

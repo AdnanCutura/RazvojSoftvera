@@ -1,0 +1,40 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModel.NastavniciVm
+@{
+    ViewData["Title"] = "Nastavnici";
+}
+<nav class="mtd-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Početna</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nastavnici</li>
+    </ol>
+</nav>
+<h2 class="title">Odaberite nastavnika</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Škole</th>
+            <th>Nastavnik</th>
+            <th>Akcija</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var nastavnik in Model.Nastavnici)
+            {
+                <tr>
+                    <td>
+                        @{
+                            foreach (var skola in nastavnik.Skole)
+                            {
+                                <span>@skola / </span>
+                            }
+                        }
+                    </td>
+                    <td>@nastavnik.ImePrezime</td>
+                    <td><a asp-action="Odaberi" asp-route-id="@nastavnik.NastavnikId" class="btn btn-success">Odaberi</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

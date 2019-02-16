@@ -1,0 +1,41 @@
+﻿@model RS1_Ispit_asp.net_core.EntityModels.MaturskiIspit
+@{
+    ViewData["Title"] = "Uredi";
+}
+<nav class="mtd-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Početna</a></li>
+        <li class="breadcrumb-item"><a asp-controller="OdrzanaNastava" asp-action="Index">Nastavnici</a></li>
+        <li class="breadcrumb-item"><a asp-controller="OdrzanaNastava" asp-action="Odaberi" asp-route-id="@Model.NastavnikId">Maturski ispiti</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Maturski ispit</li>
+    </ol>
+</nav>
+
+<h2 ajax-poziv="da" ajax-rezultat="ajaxDiv" ajax-url="/Ajax/Index/@Model.Id" class="title">Uređivanje maturskog ispita</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4><b>Profesor:</b> @Model.Nastavnik.Ime @Model.Nastavnik.Prezime </h4>
+        <h4><b>Predmet:</b> @Model.Predmet.Naziv</h4>
+        <h4><b>Datum maturskog ispita:</b> @Model.DatumIspita.ToShortDateString().</h4>
+    </div>
+    <div class="col-md-6">
+        <form asp-action="SnimiMaturski" class="form-group">
+            <h4>Napomena: </h4>
+            <textarea rows="4" cols="50" asp-for="Napomena" class="form-control"></textarea>
+            @if (string.IsNullOrWhiteSpace(Model.Napomena))
+            {
+                <button class="mtd-1 btn btn-success btn-block" type="submit">Dodaj napomenu</button>
+            }
+            else
+            {
+                <button class="mtd-1 btn btn-block btn-primary" type="submit">Uredi napomenu</button>
+            }
+
+            <input asp-for="NastavnikId" type="hidden" />
+            <input asp-for="Id" type="hidden" />
+        </form>
+    </div>
+</div>
+
+<div id="ajaxDiv"></div>

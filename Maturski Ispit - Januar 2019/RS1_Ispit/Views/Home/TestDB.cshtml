@@ -1,0 +1,52 @@
+﻿@using RS1_Ispit_asp.net_core.EF
+@model RS1_Ispit_asp.net_core.EF.MojContext
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="title">Broj zapisa po tabelama</h2>
+
+<table class="table--db table-bordered table-striped table-hover">
+    <tr>
+        <td>Dodjeljeni predmeti</td>
+        <td>@Model.DodjeljenPredmet.Count()</td>
+    </tr>
+
+    <tr>
+        <td>Nastavnici</td>
+        <td>@Model.Nastavnik.Count()</td>
+    </tr>
+   
+    <tr>
+        <td>Odjeljenja</td>
+        <td>@Model.Odjeljenje.Count()</td>
+    </tr>
+    <tr>
+        <td>Stavke odjeljenja</td>
+        <td> @Model.OdjeljenjeStavka.Count()</td>
+    </tr>
+    <tr>
+        <td>Predaje predmeta</td>
+        <td>@Model.PredajePredmet.Count()</td>
+    </tr>
+    <tr>
+        <td>Predmeti</td>
+        <td>@Model.Predmet.Count()</td>
+    </tr>
+    <tr>
+        <td>Skole</td>
+        <td> @Model.Skola.Count()</td>
+    </tr>
+    <tr>
+        <td>Skolske godine</td>
+        <td>@Model.SkolskaGodina.Count()</td>
+    </tr>
+    <tr>
+        <td>Ucenici</td>
+        <td>@Model.Ucenik.Count()</td>
+    </tr>
+</table>
+
+<a asp-controller="Home" asp-action="Index" class="mtd-1 btn btn-primary"><i class="pr-1 fas fa-angle-left"></i>Nazad</a>

@@ -1,0 +1,72 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModel.AjaxVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="title">Prikaz svih učenika</h3>
+<div class="tableout">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Učenik</th>
+                <th>Prosjek ocjena</th>
+                <th>Pristup ispitu</th>
+                <th>Rezultat maturskog</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                foreach (var stavka in Model.MaturskiStavke)
+                {
+                    <tr>
+                        <td>@stavka.Ucenik</td>
+                        <td>@stavka.ProsjekOcjena</td>
+                        @{
+                            if (stavka.PristupioIspitu)
+                            {
+                                <td><button ajax-poziv='da' ajax-url="/Ajax/Pristupio/@stavka.MaturskiStavkaId" ajax-rezultat="ajaxDiv" class="btn btn-success">DA</button></td>
+                                <td class="stavka--editBodovi">
+                                    <span class="stavka--editBodovi--input" id="ispisRez-@stavka.MaturskiStavkaId">@stavka.RezultattIspita</span>
+                                    <form class="hiddenObject from-group" id="snimiRez-@stavka.MaturskiStavkaId" ajax-url="/Ajax/SnimiRezultat/" ajax-poziv='da' ajax-rezultat="ajaxDiv" method="post">
+                                        <div class="form--objects">
+                                            <input class="form-control" type="text" asp-for="@stavka.RezultattIspita" name="bodovi" />
+                                            <input type="hidden" asp-for="@stavka.MaturskiStavkaId" name="id" />
+                                            <span asp-validation-for="@stavka.RezultattIspita" class="text-danger"></span>
+                                            <button type="submit" class="btn btn-success">Snimi</button>
+                                        </div>
+                                    </form>
+                                    <a idForma="@stavka.MaturskiStavkaId" class="edit" href="#"> <i class="fas fa-pencil-alt"></i></a>
+                                </td>
+                                <td><a ajax-poziv='da' ajax-url="/Ajax/Uredi?id=@stavka.MaturskiStavkaId" ajax-rezultat="ajaxDiv" class="btn btn-primary">Uredi</a></td>
+                            }
+                            else
+                            {
+                                <td><button ajax-poziv='da' ajax-url="/Ajax/Pristupio/@stavka.MaturskiStavkaId" ajax-rezultat="ajaxDiv" class="btn btn-danger">NE</button></td>
+                                <td><i class="stavka--nijePristupio--icon fas fa-times"></i></td>
+                                <td></td>
+                            }
+                        }
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        //Row edit broja bodova kod učenika
+        $('.edit').click(function () {
+            var id = $(this).attr('idForma');
+            console.log(id);
+            console.log('22'); console.log('3322');
+            $('#snimiRez-' + id).toggle();
+            $('#ispisRez-' + id).toggle();
+            $(this).toggle();
+        });
+    });
+
+</script>
