@@ -13543,11 +13543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+      "projectUniqueName": "D:\\Coding\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
       "projectName": "RS1_Ispit_asp.net_core",
-      "projectPath": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+      "projectPath": "D:\\Coding\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
       "packagesPath": "C:\\Users\\AdnanČutura\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\obj\\",
+      "outputPath": "D:\\Coding\\Projects Visual Studio 2017\\RazvojSoftvera\\Maturski Ispit - Januar 2019\\RS1_Ispit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

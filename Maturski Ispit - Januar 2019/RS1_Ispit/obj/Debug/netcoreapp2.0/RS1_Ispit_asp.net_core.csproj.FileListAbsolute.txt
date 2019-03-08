@@ -97,3 +97,14 @@ D:\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_I
 D:\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
 D:\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
 D:\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.deps.json
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.json
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.dev.json
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csprojAssemblyReference.cache
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csproj.CoreCompileInputs.cache
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfoInputs.cache
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+D:\Coding\Projects Visual Studio 2017\RazvojSoftvera\Maturski Ispit - Januar 2019\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb

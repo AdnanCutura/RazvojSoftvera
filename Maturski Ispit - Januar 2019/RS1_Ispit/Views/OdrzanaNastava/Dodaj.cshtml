@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label>Škola</label>
                 <select asp-for="SkolaId" asp-items="@Model.Skole" class="form-control">
-                    <option>Odaberite školu*</option>
+                    <option value="">Odaberite školu*</option>
                 </select>
                 <span asp-validation-for="SkolaId" class="text-danger"></span>
             </div>
@@ -49,7 +49,7 @@
             <div class="form-group">
                 <label>Predmet</label>
                 <select asp-for="PredmetId" asp-items="@Model.Predmeti" class="form-control">
-                    <option>Odaberite predmet*</option>
+                    <option value="">Odaberite predmet*</option>
                 </select>
                 <span asp-validation-for="PredmetId" class="text-danger"></span>
             </div>

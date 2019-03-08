@@ -9,11 +9,12 @@ namespace RS1_Ispit_asp.net_core.ViewModel {
     public class DodajMaturskiIspitVm {
         public int NastavnikId { get; set; }
         public string Nastavnik { get; set; }
+        [Display(Name = "Škola")]
         public List<SelectListItem> Skole { get; set; }
 
         [Required(ErrorMessage = "Odabir škole je obavezno polje")]
-        [Display(Name = "Škola")]
         public int SkolaId { get; set; }
+
         public List<SelectListItem> Predmeti { get; set; }
 
         [Required(ErrorMessage = "Odabir predmeta je obavezno polje")]

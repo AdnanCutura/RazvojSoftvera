@@ -38,3 +38,17 @@ D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.1
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.csproj.CopyComplete
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.dll
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.pdb
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Web.deps.json
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Web.runtimeconfig.json
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Web.runtimeconfig.dev.json
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Web.dll
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Web.pdb
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Data.dll
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\bin\Debug\netcoreapp2.0\Ispit.Data.pdb
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.csprojAssemblyReference.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.AssemblyInfoInputs.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.AssemblyInfo.cs
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.csproj.CopyComplete
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.dll
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Web\obj\Debug\netcoreapp2.0\Ispit.Web.pdb

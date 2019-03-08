@@ -3465,11 +3465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects Visual Studio 2017\\RSI\\#Ispiti\\ReminderNotifikacija - Ispit 2018.2.13\\rs1_ispit_2018_02_13\\Ispit.Data\\Ispit.Data.csproj",
+      "projectUniqueName": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Reminder Ispit - Februar 2018\\Ispit.Data\\Ispit.Data.csproj",
       "projectName": "Ispit.Data",
-      "projectPath": "D:\\Projects Visual Studio 2017\\RSI\\#Ispiti\\ReminderNotifikacija - Ispit 2018.2.13\\rs1_ispit_2018_02_13\\Ispit.Data\\Ispit.Data.csproj",
+      "projectPath": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Reminder Ispit - Februar 2018\\Ispit.Data\\Ispit.Data.csproj",
       "packagesPath": "C:\\Users\\AdnanČutura\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects Visual Studio 2017\\RSI\\#Ispiti\\ReminderNotifikacija - Ispit 2018.2.13\\rs1_ispit_2018_02_13\\Ispit.Data\\obj\\",
+      "outputPath": "D:\\Projects Visual Studio 2017\\RazvojSoftvera\\Reminder Ispit - Februar 2018\\Ispit.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

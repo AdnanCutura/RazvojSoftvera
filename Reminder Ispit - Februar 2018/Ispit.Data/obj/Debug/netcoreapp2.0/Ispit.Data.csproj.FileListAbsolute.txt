@@ -24,3 +24,12 @@ D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.1
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.AssemblyInfo.cs
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.dll
 D:\Projects Visual Studio 2017\RSI\#Ispiti\ReminderNotifikacija - Ispit 2018.2.13\rs1_ispit_2018_02_13\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.pdb
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\bin\Debug\netcoreapp2.0\Ispit.Data.deps.json
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\bin\Debug\netcoreapp2.0\Ispit.Data.dll
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\bin\Debug\netcoreapp2.0\Ispit.Data.pdb
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.csprojAssemblyReference.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.AssemblyInfoInputs.cache
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.AssemblyInfo.cs
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.dll
+D:\Projects Visual Studio 2017\RazvojSoftvera\Reminder Ispit - Februar 2018\Ispit.Data\obj\Debug\netcoreapp2.0\Ispit.Data.pdb
